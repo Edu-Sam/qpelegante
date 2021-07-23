@@ -39,6 +39,7 @@ export class DashboardComponent{
     }
   }
 
+
   changePage(newPage: number){
     this.selectedPage=newPage;
   }
@@ -61,5 +62,14 @@ export class DashboardComponent{
   addProductToCart(product:Product){
     this.cart.addLine(product);
     this.router.navigateByUrl("/cart");
+  }
+
+  setProductStyle(){
+    return{
+      'padding':'10px',
+      'margin-left':'5px',
+      'border-radius':'12px',
+      'box-shadow':'10px 10px rgba(212,212,212,1)'
+    }
   }
 }
