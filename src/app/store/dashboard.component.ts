@@ -72,4 +72,16 @@ export class DashboardComponent{
       'box-shadow':'10px 10px rgba(212,212,212,1)'
     }
   }
+
+  setProductContainerStyle(userProduct: String){
+    return{
+      'background':'url( ' + userProduct + ')' ,
+  //    'background-image': 'url(assets/images/dress3.jpg)',
+      'background-size':'230px 280px',
+      'background-position':'center',  
+      'background-repeat': 'no-repeat',
+      'height':'280px',
+      'align-items':'center'
+    }
+  }
 }

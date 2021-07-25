@@ -1,6 +1,6 @@
 <div class="container-fluid m-0 p-0">
 <div class="col-sm-12 m-0 p-0">
-<div class="p-2 d-flex flex-row justify-content-between">
+<div class="p-2 d-flex flex-row justify-content-center">
 
 
 <div>
@@ -52,11 +52,13 @@ Admin
 </div>
 
 <div class="col-10 p-2">
-<div *ngFor="let product of products" class="card m-1 bg-light d-inline-block" style="width: 18em;">
-  <div class="container-fluid bg-success m-0 p-0">
+<div  *ngFor="let product of products" class="card ml-3 mb-3 shadow-sm p-0 bg-light d-md-inline-block  col-md-3  col-sm-12 d-xs-block">
+  <div class=" container-fluid bg-white m-0 p-0" [ngStyle]="setProductContainerStyle(product.photo)">
+   container
   </div>
 <h4>
 {{product.name}}
+<h6 style="font-size: 0.8 em;">{{product.photo}}</h6>
 <span class="badge badge-pill badge-primary float-right">
 {{product.price | currency:"USD":"symbol":"2.2-2"}}
 </span>
