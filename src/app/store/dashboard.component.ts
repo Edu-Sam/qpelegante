@@ -77,10 +77,11 @@ export class DashboardComponent{
     return{
       'background':'url( ' + userProduct + ')' ,
   //    'background-image': 'url(assets/images/dress3.jpg)',
-      'background-size':'230px 280px',
-      'background-position':'center',  
+      'background-size':'contain',
+  //    'background-size':'180px 210px',
+      'background-position':'center',
       'background-repeat': 'no-repeat',
-      'height':'280px',
+      'height':'250px',
       'align-items':'center'
     }
   }

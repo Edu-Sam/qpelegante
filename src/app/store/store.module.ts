@@ -4,10 +4,11 @@ import {FormsModule} from "@angular/forms";
 import {DashboardComponent} from "./dashboard.component";
 import {RouterModule} from "@angular/router";
 import {ModelModule} from "../model/model.module";
+import {CheckoutComponent} from "./checkout/checkout.component";
 
 @NgModule({
   imports:[BrowserModule,FormsModule,RouterModule,ModelModule],
-  declarations:[DashboardComponent],
+  declarations:[DashboardComponent,CheckoutComponent],
   exports:[DashboardComponent],
 })
 

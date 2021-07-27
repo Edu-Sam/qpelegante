@@ -33,7 +33,7 @@
   my container
 </div>
 
-<div class="row">
+<div class="row m-3">
 <div class="col-2 p-2">
 <button  class="btn btn-block  btn-outline-primary" (click)="changeCategory()">
  Home
@@ -51,25 +51,36 @@ Admin
 
 </div>
 
-<div class="col-10 p-2">
-<div  *ngFor="let product of products" class="card ml-3 mb-3 shadow-sm p-0 bg-light d-md-inline-block  col-md-3  col-sm-12 d-xs-block">
-  <div class=" container-fluid bg-white m-0 p-0" [ngStyle]="setProductContainerStyle(product.photo)">
-   container
-  </div>
-<h4>
-{{product.name}}
-<h6 style="font-size: 0.8 em;">{{product.photo}}</h6>
-<span class="badge badge-pill badge-primary float-right">
-{{product.price | currency:"USD":"symbol":"2.2-2"}}
-</span>
-</h4>
+<div class="col-md-8 pt-2 px-0 mx-3">
+<div  *ngFor="let product of products"
+class="card ml-1 mb-3 shadow-sm p-0
+ d-flex flex-column
+ bg-white d-md-inline-block  col-md-3 col-sm-12 d-xs-block">
+  <div class=" container-fluid bg-white m-0 p-2" [ngStyle]="setProductContainerStyle(product.photo)">
 
-<div class="card-text bg-white p-1">{{product.description}}
-<button class="btn btn-success btn-sm float-right"
+  </div>
+<h6>
+{{product.name}}
+<!--<span class="badge badge-pill product-price-badge float-right">
+{{product.price | currency:"Ksh":"symbol":"2.2-2"}}
+</span>-->
+</h6>
+
+<!--<div class="card-text bg-white p-0">{{product.description}}
+</div>-->
+
+<span class="product-price-badge m-0 p-0 float-left">
+{{product.price | currency:"Ksh":"symbol":"2.2-2"}}
+</span>
+
+<div class="card-text bg-white p-0">
+<button class="btn btn-sm btn-block m-0 cart-button"
         (click)="addProductToCart(product)">
 Add to Cart
 </button>
 </div>
+
+
 </div>
 
 <div class="form-inline float-bottom mr-1">
@@ -94,7 +105,9 @@ Add to Cart
 
 </div>
 
-</div>
+<!--<div class="col-md-2 mx-0">
+<checkout></checkout>
+</div>-->
 
 </div>
 </div>
