@@ -73,12 +73,22 @@ class="card ml-1 mb-3 shadow-sm p-0
 {{product.price | currency:"Ksh":"symbol":"2.2-2"}}
 </span>
 
-<div class="card-text bg-white p-0">
+<div class="card-text bg-white p-0 m-2">
+<button class="btn btn-sm btn-block m-0 view-button"
+        (click)="addProductToCart(product)">
+View
+</button>
+</div>
+
+
+<div class="card-text bg-white p-0 m-2">
 <button class="btn btn-sm btn-block m-0 cart-button"
         (click)="addProductToCart(product)">
 Add to Cart
 </button>
 </div>
+
+
 
 
 </div>
