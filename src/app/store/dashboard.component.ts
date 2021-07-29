@@ -3,6 +3,7 @@ import {Product} from "../model/product.model";
 import {ProductRepository} from "../model/product.repository";
 import {Cart } from "../model/cart.model";
 import {Router} from "@angular/router";
+//import {ProductDetailComponent} from "./products/product_detail.component";
 
 
 

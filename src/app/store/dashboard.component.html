@@ -1,6 +1,6 @@
-<div class="container-fluid m-0 p-0">
+<div class="container-fluid main_wrapper m-0 p-0">
 <div class="col-sm-12 m-0 p-0">
-<div class="p-2 d-flex flex-row justify-content-center">
+<div class="p-2 d-flex flex-row container-fluid bg-white justify-content-center">
 
 
 <div>
@@ -33,7 +33,10 @@
   my container
 </div>
 
-<div class="row m-3">
+<div class="container-fluid col-sm-12  p-2 ">
+<router-outlet></router-outlet>
+</div>
+<!--<div class="row m-3">
 <div class="col-2 p-2">
 <button  class="btn btn-block  btn-outline-primary" (click)="changeCategory()">
  Home
@@ -52,6 +55,9 @@ Admin
 </div>
 
 <div class="col-md-8 pt-2 px-0 mx-3">
+//<router-outlet></router-outlet>
+</div>
+<div class="col-md-8 pt-2 px-0 mx-3">
 <div  *ngFor="let product of products"
 class="card ml-1 mb-3 shadow-sm p-0
  d-flex flex-column
@@ -61,13 +67,10 @@ class="card ml-1 mb-3 shadow-sm p-0
   </div>
 <h6>
 {{product.name}}
-<!--<span class="badge badge-pill product-price-badge float-right">
-{{product.price | currency:"Ksh":"symbol":"2.2-2"}}
-</span>-->
+
 </h6>
 
-<!--<div class="card-text bg-white p-0">{{product.description}}
-</div>-->
+
 
 <span class="product-price-badge m-0 p-0 float-left">
 {{product.price | currency:"Ksh":"symbol":"2.2-2"}}
@@ -115,9 +118,9 @@ Add to Cart
 
 </div>
 
-<!--<div class="col-md-2 mx-0">
+<div class="col-md-2 mx-0">
 <checkout></checkout>
-</div>-->
-
 </div>
+
+</div>-->
 </div>
