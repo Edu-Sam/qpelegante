@@ -1,6 +1,8 @@
 import {Injectable} from "@angular/core";
 import {Product} from "./product.model";
 import {StaticDataSource} from "./static.datasource";
+import {Color} from "./product.model";
+import {Size} from "./product.model";
 /*import {RestDataSource} from "./rest.datasource";*/
 
 @Injectable()
@@ -8,11 +10,14 @@ import {StaticDataSource} from "./static.datasource";
 export class ProductRepository{
 private products:Product[]=[];
 private categories:string[]=[];
+private colors:Color[]=[];
+private sizes: Size[]=[];
 
 constructor(private dataSource: StaticDataSource){
   dataSource.getProducts().subscribe(data =>{
     this.products=data;
     this.categories=data.map(p=>p.category).filter((c,index,array)=>array.indexOf(c)==index).sort();
+
   });
 }
 
@@ -31,6 +36,7 @@ getProduct(id:number): Product | undefined {
 getCategories(): string[] {
   return this.categories;
 }
+
 
 /*saveProduct(product: Product){
   if(product.id==null || product.id==0){
