@@ -34,8 +34,8 @@ Admin
   <hr class="header_divider">
 <div class="col-sm-12 py-3 d-flex flex-column">
  <div class="row">
-  <div class="col-sm-6 " [ngStyle]="setProductContainerStyle(product.photo)"></div>
-  <div class="container-fluid m-0 p-0 product_details_card col-sm-4 d-flex flex-row">
+  <div class="col-md-6 col-xs-12" [ngStyle]="setProductContainerStyle(product.photo)"></div>
+  <div class="container-fluid m-0 p-0 product_details_card col-md-4 col-xs-12 d-flex flex-row">
    <div class="container-fluid col-sm-12 m-0 p-0 d-flex flex-column">
 
      <div class="container-fluid d-flex flex-column">
@@ -50,8 +50,9 @@ Admin
       <h6 class="text-muted">Colors</h6>
 
      <div class="m-2 container-fluid align-items-center justify-content-center">
-      <div *ngFor="let color of getcolors" class="col-sm-3 d-inline-block m-1">
-        <button   class="color_container btn rounded-circle m-2 d-inline-block"
+      <div *ngFor="let color of getcolors" class="col-md-3 col-3 d-md-inline-block
+        d-inline-block m-1">
+        <button   class="color_container btn rounded-circle m-2 d-md-inline-block"
                [ngStyle]="setContainerColor(color.name)">
 
         </button>
@@ -73,7 +74,14 @@ Admin
         </div>
       </div>
 
+
      </div>
+
+     <div class="container-fluid m-0 p-0 d-flex flex-column">
+      <button class="btn btn-block fixed-sticky cart-button">Add to Cart</button>
+     </div>
+
+
    </div>
 
 
