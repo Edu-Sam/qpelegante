@@ -6,8 +6,8 @@ export class Product {
     public category: string='',
     public photo:string='',
     public description?: string,
-    public color: Color[]=[],
-    public sizes: Size[]=[],
+    public color: Color=new Color(),
+    public sizes: Size=new Size(),
     public price:number=0.0){}
 }
 

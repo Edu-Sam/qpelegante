@@ -15,7 +15,7 @@ import {Color} from "../../model/product.model";
 export class ProductDetailComponent{
 viewing: boolean=false;
 product: Product=new Product();
-public colors: Color[]=[];
+public colors: Color=new Color();
 selected_size:Size=new Size();
 
 constructor(private repository: ProductRepository,private router: Router,activateRoute: ActivatedRoute){
@@ -40,13 +40,13 @@ setProductContainerStyle(userProduct: String){
   }
 }
 
-get getSizes(): Size[]{
+/*get getSizes(): Size[]{
   return this.product.sizes;
 }
 
  get getcolors(): Color[]{
   return this.product.color;
-}
+}*/
 
 setSize(size: Size){
  if(size!=undefined){
@@ -59,7 +59,7 @@ setContainerColor(color: String){
     'background-color':''+color+'',
     'width':'30px',
     'height':'30px',
-    'box-shadow':'4px 8px 4px rgba(212,212,212,1)'
+  //  'box-shadow':'4px 8px 4px rgba(212,212,212,1)'
   }
 }
 

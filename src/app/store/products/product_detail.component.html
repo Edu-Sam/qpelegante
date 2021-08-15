@@ -42,6 +42,13 @@ Admin
        <h6 class="text-muted">Item: {{product.name}}</h6>
        <h6 class="text-muted">Category: {{product.category}}</h6>
        <h6 class="text-muted">Price: Ksh{{product.price}}</h6>
+       <div class="row m-2">
+       <h6 class="text-muted mr-2 mt-2">Color</h6>
+       <button   class="color_container btn rounded-circle d-md-inline-block"
+              [ngStyle]="setContainerColor(colors.name)">
+
+       </button>
+       </div>
        <!--<h6>{{product.color[0].name}}</h6>-->
      </div>
       <hr class="header_divider"/>
@@ -50,7 +57,7 @@ Admin
       <h6 class="text-muted">Colors</h6>
 
      <div class="m-2 container-fluid align-items-center justify-content-center">
-      <div *ngFor="let color of getcolors" class="col-md-3 col-3 d-md-inline-block
+      <!--<div *ngFor="let color of getcolors" class="col-md-3 col-3 d-md-inline-block
         d-inline-block m-1">
         <button   class="color_container btn rounded-circle m-2 d-md-inline-block"
                [ngStyle]="setContainerColor(color.name)">
@@ -58,12 +65,12 @@ Admin
         </button>
 
         <h6 class="color_name">{{color.name}}</h6>
-      </div>
+      </div>-->
       </div>
 
      </div>
 
-     <div class="container-fluid m-0 p-0 d-flex flex-column">
+    <!-- <div class="container-fluid m-0 p-0 d-flex flex-column">
        <h6 class="text-muted">Sizes</h6>
 
       <div class="container-fluid">
@@ -75,7 +82,7 @@ Admin
       </div>
 
 
-     </div>
+     </div>-->
 
      <div class="container-fluid m-0 p-0 d-flex flex-column">
       <button class="btn btn-block fixed-sticky cart-button">Add to Cart</button>

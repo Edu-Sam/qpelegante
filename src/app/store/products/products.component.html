@@ -17,14 +17,20 @@
 
 <div class="row my-3 col-sm-12">
 <div class="col-md-2 p-2 container-fluid bg-white rounded-top">
-<button  class="btn btn-block  btn-outline-primary" (click)="changeCategory()">
+<button  class="btn btn-block  btn-outline-info" (click)="changeCategory()">
  Home
 </button>
 
-<button *ngFor="let cat of categories" class="btn btn-outline-primary btn-block"
+<button *ngFor="let cat of categories" class="btn btn-outline-info category_unselected_btn btn-block"
       [class.active]="cat==selectedCategory" (click)="changeCategory(cat)">
 {{cat}}
 </button>
+
+<!--<ul class="nav flex-column">
+<li *ngFor="let cat of categories" class="nav-item" [style.background-color]="cat==selectedCategory ? 'purple' : 'white'" >
+<a  class="nav-link" href="#" (click)="changeCategory(cat)">{{cat}}</a>
+</li>
+</ul>-->
 
 <button class="btn btn-block btn-danger mt-3" routerLink="/admin">
 Admin
